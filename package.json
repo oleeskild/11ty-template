@@ -1,0 +1,23 @@
+{
+  "name": "11ty-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env ELEVENTY_ENV=dev eleventy"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "cross-env": "^6.0.3"
+  },
+  "dependencies": {
+    "clean-css": "^4.2.3",
+    "fs": "0.0.1-security",
+    "node-sass-promise": "^1.0.0",
+    "path": "^0.12.7",
+    "sass": "^1.29.0"
+  }
+}
