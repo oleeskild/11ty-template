@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const sass = require('node-sass-promise')
+const sass = require('sass')
 const CleanCSS = require('clean-css')
 
 // the file name as an entry point for postcss compilation
@@ -18,7 +18,7 @@ module.exports = class {
   };
 
   async render ({ rawCss, rawFilepath }) {
-    const {css} = await sass.render({file: rawFilepath});
+    const {css} = await sass.compile(rawFilepath);
     const output = new CleanCSS({}).minify(css.toString()).styles
     return output;
   };
